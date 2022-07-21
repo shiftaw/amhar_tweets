@@ -1,0 +1,30 @@
+.gender {
+  &-container {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+    background: #f7f7f7;
+    /* Light/Grayscale/Border */
+
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    width: 148px;
+    height: 40px;
+    &-item {
+      color: #585757;
+      padding: 8px;
+      width: 50%;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  &-active {
+    background: #0085ff;
+    color: #fff;
+    /* Light/Drop Shadow/2 */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+  }
+}

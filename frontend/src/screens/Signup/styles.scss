@@ -1,0 +1,38 @@
+.signin {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-container {
+    background-color: red;
+    width: 400px;
+    height: 525px;
+    padding: 24px;
+
+    /* Light/Grayscale/Background Primary */
+
+    background: #ffffff;
+    /* Light/Drop Shadow/2 */
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+  }
+  &-header {
+    height: 80px;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    &-title {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: #1c1c1c;
+    }
+  }
+}

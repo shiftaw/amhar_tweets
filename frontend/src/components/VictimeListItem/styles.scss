@@ -1,0 +1,16 @@
+.list-item {
+  display: grid;
+  grid-template-columns: 20% 20% 10% 10% 10% 10% 10% 10%;
+  height: 58px;
+  border-bottom: 1px solid #e8e8e8;
+  td {
+    margin: auto 0px;
+    text-align: left;
+    font-size: 12px;
+  }
+  th {
+    margin: auto 0px;
+    text-align: left;
+    font-size: 12px;
+  }
+}

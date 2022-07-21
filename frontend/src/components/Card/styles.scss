@@ -1,0 +1,10 @@
+.card-container {
+  background: #fff;
+  /* Light/Drop Shadow/2 */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+
+  height: 300px;
+  width: 300px;
+}
