@@ -27,7 +27,7 @@ export default function Signin() {
     localStorage.setItem('email', email)
 
     axios
-      .post('http://localhost:4000/auth/login', {
+      .post('/auth/login', {
         name: 'shiftaw',
         email: email,
         password: password,

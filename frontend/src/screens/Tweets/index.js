@@ -26,7 +26,7 @@ export default function Tweets() {
   }, [])
 
   const pullTweets = () => {
-    axios.get('http://localhost:4000/tweet').then((res) => {
+    axios.get('/tweet').then((res) => {
       console.log(res.data)
       setData(res.data)
       setTweet({ message: '', hide: false, _id: null })
@@ -37,21 +37,19 @@ export default function Tweets() {
     setTweet({ ...tweet, message, hide })
   }
   const handleDelete = (id) => {
-    axios
-      .delete('http://localhost:4000/tweet', { data: { _id: id } })
-      .then((res) => {
-        pullTweets()
-      })
+    axios.delete('/tweet', { data: { _id: id } }).then((res) => {
+      pullTweets()
+    })
   }
 
   const handleSave = () => {
     console.log(tweet)
     if (tweet._id) {
-      axios.put('http://localhost:4000/tweet', { data: tweet }).then((res) => {
+      axios.put('/tweet', { data: tweet }).then((res) => {
         pullTweets()
       })
     } else {
-      axios.post('http://localhost:4000/tweet', { data: tweet }).then((res) => {
+      axios.post('/tweet', { data: tweet }).then((res) => {
         pullTweets()
       })
     }
@@ -129,10 +127,3 @@ export default function Tweets() {
     </div>
   )
 }
-
-const data = [
-  'Commodo dolore esse ut do enim do consequat id elit eiusmod. Sit exercitation mollit qui reprehenderit esse sunt commodo. Deserunt pariatur incididunt irure occaecat enim voluptate non dolore excepteur. Pariatur nisi excepteur cupidatat qui culpa deserunt tempor cillum commodo duis esse ea et. Qui sunt veniam enim consectetur.',
-  ,
-  'Commodo dolore esse ut do enim do consequat id elit eiusmod. Sit exercitation mollit qui reprehenderit esse sunt commodo. Deserunt pariatur incididunt irure occaecat enim voluptate non dolore excepteur. Pariatur nisi excepteur cupidatat qui culpa deserunt tempor cillum commodo duis esse ea et. Qui sunt veniam enim consectetur.',
-  'Commodo dolore esse ut do enim do consequat id elit eiusmod. Sit exercitation mollit qui reprehenderit esse sunt commodo. Deserunt pariatur incididunt irure occaecat enim voluptate non dolore excepteur. Pariatur nisi excepteur cupidatat qui culpa deserunt tempor cillum commodo duis esse ea et. Qui sunt veniam enim consectetur.',
-]
